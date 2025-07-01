@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "MyAnalogClock",
-    platforms: [.macOS(.v11)], // Set the platform to macOS 11 or later
+    platforms: [.macOS(.v14)], // Set the platform to macOS 14 or later
     products: [
         .executable(name: "MyAnalogClock", targets: ["MyAnalogClock"]),
     ],

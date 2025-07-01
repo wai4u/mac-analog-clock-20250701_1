@@ -1,5 +1,6 @@
 
 import SwiftUI
+import AppKit
 
 @main
 struct MyAnalogClockApp: App {
@@ -7,5 +8,21 @@ struct MyAnalogClockApp: App {
         WindowGroup {
             ContentView()
         }
+
+        Settings {
+            SettingsView()
+        }
+
+        // Add a menu bar extra for settings
+        MenuBarExtra("MyAnalogClock", systemImage: "clock.fill") {
+            SettingsLink {
+                Text("Settings...")
+            }
+            Divider()
+            Button("Quit") {
+                NSApplication.shared.terminate(nil)
+            }
+        }
     }
 }
+
